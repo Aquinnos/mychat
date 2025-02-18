@@ -1,11 +1,24 @@
-import React from 'react';
 import { useChatStore } from '../store/useChatStore';
 import Sidebar from '../components/Sidebar';
 import ChatContainer from '../components/ChatContainer';
 import NoChatSelected from '../components/NoChatSelected';
+import { useEffect } from 'react';
+import { useAuthStore } from '../store/useAuthStore';
 
 const HomePage = () => {
-  const { selectedUser } = useChatStore;
+  const { selectedUser } = useChatStore();
+  const { authUser, checkAuth } = useAuthStore();
+
+  useEffect(() => {
+    console.log('User updated', authUser);
+  }, [authUser]);
+
+  useEffect(() => {
+    // Jeżeli authUser jest null, wymuś sprawdzenie autoryzacji
+    if (!authUser) {
+      checkAuth();
+    }
+  }, [authUser, checkAuth]);
 
   return (
     <div className="h-screen bg-base-200">
