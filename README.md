@@ -1,7 +1,7 @@
 # MyChat
 
-MyChat is a full-featured chat application designed for real-time communication. The project is built using a full-stack approach that separates the frontend and backend components. It is an ideal demonstration of modern web development using technologies such as React, Express, Socket.io, and MongoDB.
-
+MyChat is a full-featured chat application designed for real-time communication. The project is built using a full-stack approach that separates the frontend and backend components. It is an ideal demonstration of modern web development using technologies such as React, Express, Socket.io, and MongoDB. You can check here: https://movie-finder-le5c.onrender.com
+ 
 ## Table of Contents
 
 - [Features](#features)
